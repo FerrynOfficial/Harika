@@ -2,10 +2,10 @@ global.Discord = require('discord.js')
 const client = new Discord.Client();
 const fs = require('fs')
 client.login('process.env.BOT_TOKEN')
-client.owner = 'Ваш Айди';
+client.owner = '525003205394825257';
 client.on('ready', () => {
 })
-    client.user.setActivity('$help | Русский Бот', '$help | Русский Бот')
+    client.user.setActivity('$help | Русский Бот', 'dnd')
 client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.get('551126937825968139')
    message.channel.send(`**${member}, Добро пожаловать на сервер ${member.guild.name}**`)
