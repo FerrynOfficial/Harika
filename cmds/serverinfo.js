@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     .addField('Роли', message.guild.roles.size, true)
     .addField('Участников', message.guild.members.size, true)
     .setThumbnail(message.guild.iconURL)
-    .setFooter('Ваше сообщение', client.user.avatarURL)
+    .setFooter('Harika | ServerInfo', client.user.avatarURL)
     .setColor('RANDOM')
     message.channel.send(embed)
    }
