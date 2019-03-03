@@ -1,7 +1,7 @@
 global.Discord = require('discord.js')
 const client = new Discord.Client();
 const fs = require('fs')
-client.login('process.env.BOT_TOKEN')
+client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
 client.on('ready', () => {
 })
