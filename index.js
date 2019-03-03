@@ -4,8 +4,12 @@ const fs = require('fs')
 client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
 client.on('ready', () => {
-})
-    client.user.setActivity('$help | Русский Бот', 'dnd')
+   client.user.setPresence({
+          game:{
+            name:'$help | Русский Бот',
+            type:"PLAYING"
+          }
+        }) 
 client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.get('551126937825968139')
    message.channel.send(`**${member}, Добро пожаловать на сервер ${member.guild.name}**`)
