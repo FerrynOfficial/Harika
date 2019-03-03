@@ -13,7 +13,7 @@ client.on('message', message => {
     }
     var currentLevel = xp[message.author.id].level
     var currentXp = xp[message.author.id].xp
-    var nextLevel = xp[message.author,id].level * 100;
+    var nextLevel = xp[message.author.id].level * 100;
     xp[message.author.id].level = currentXp + addxp;
     if(nextLevel <= xp[message.author.id].xp) {
         xp[message.author.id].level = currentLevel + 1;
