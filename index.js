@@ -16,10 +16,10 @@ client.on('message', message => {
     var nextLevel = xp[message.author.id].level * 100;
     xp[message.author.id].level = currentXp + addxp;
     if(nextLevel <= xp[message.author.id].xp) {
-        xp[message.author.id].level = currentLevel + 1;
+        xp[message.author.id].xp = currentLevel + 1;
         var levelUpEmbed = new Discord.RichEmbed()
         .setAuthor(message.author.username, message.author.avatarURL)
-        .setDescription('Поздравляю\n Вы получили ' +currentLevel + 1 + ' уровень!')
+        .setDescription('Поздравляю\n Вы получили ${currentLevel + 1} уровень!')
         .setColor('RANDOM')
         .setFooter('Harika | XP System')
         message.channel.send(levelUpEmbed)
@@ -44,11 +44,11 @@ client.on('ready', () => {
 })
 client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.get('538682429150461972')
-   message.channel.send(`**${member}, Добро пожаловать на сервер ${member.guild.name}**`)
+   channel.send(`**${member}, Добро пожаловать на сервер ${member.guild.name}**`)
 })
     client.on('guildMemberRemove', member => {
         var channel = member.guild.channel1s.get('548924952766578698')
-        message.channel.send(`**Прощай, ${member.user.tag}, желаем тебе удачи!**`)
+        channel.send(`**Прощай, ${member.user.tag}, желаем тебе удачи!**`)
 })
 client.on('messageDelete', message => {
     var channel = message.channel.send
