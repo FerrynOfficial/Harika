@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
     }
     message.guild.members.get(kickmember.id).kick(reason)
     message.reply(`**Вы успешно кикнули ${kickmember.user.tag}!**`)
-setAuthor(message.author.username, message.author.avatarURL)
+.setAuthor(message.author.username, message.author.avatarURL)
     .setFooter('Harika | Kick', client.user.avatarURL)
     .setColor('RANDOM')
 
