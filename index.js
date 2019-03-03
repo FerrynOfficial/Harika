@@ -1,7 +1,7 @@
 global.Discord = require('discord.js')
 const client = new Discord.Client();
 const fs = require('fs')
-client.login('Ваш токен')
+client.login('process.env.BOT_TOKEN')
 client.owner = 'Ваш Айди';
 client.on('ready', () => {
     client.user.setActivity('Ваш Статус', 'Ваш статус')
