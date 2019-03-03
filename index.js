@@ -4,18 +4,20 @@ const fs = require('fs')
 client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
 client.on('ready', () => {
-   client.user.setPresence({
-          game:{
-            name:'$help | Русский Бот',
-            type:"PLAYING"
-          }
-        }) 
+    client.user.setStatus('dnd')
+    client.user.setPresence({
+        game:{
+          name:'$help | Русский Бот',
+          type:"PLAYING"
+        }
+      }) 
+})
 client.on('guildMemberAdd', member => {
-    var channel = member.guild.channels.get('551126937825968139')
+    var channel = member.guild.channels.get('538682429150461972')
    message.channel.send(`**${member}, Добро пожаловать на сервер ${member.guild.name}**`)
 })
     client.on('guildMemberRemove', member => {
-        var channel = member.guild.channel1s.get('551126937825968139')
+        var channel = member.guild.channel1s.get('548924952766578698')
         message.channel.send(`**Прощай, ${member.user.tag}, желаем тебе удачи!**`)
 })
 client.on('messageDelete', message => {
