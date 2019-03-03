@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     .addField(`Ping`, `${Math.floor(client.ping)}`, true)
     .setThumbnail(client.user.avatarURL)
     .addField('Discord.js', `v${Discord.version}`, true)
-    .setFooter('Ваше Сообщение', client.user.avatarURL)
+    .setFooter('Harika | BotInfo', client.user.avatarURL)
     .setColor('RANDOM')
     message.channel.send(embed)
    }
