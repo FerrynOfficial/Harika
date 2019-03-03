@@ -30,7 +30,7 @@ client.on('message', message => {
         }
     })
 })
-client.login(process.env.BOT_TOKEN)
+client.login('QSyB79yTcpBH3B15nNFV1CgieMVat1yy')
 client.owner = '525003205394825257';
 client.on('ready', () => {
 
