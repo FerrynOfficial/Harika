@@ -1,35 +1,6 @@
 global.Discord = require('discord.js')
 const client = new Discord.Client();
 const fs = require('fs')
-const xp = JSON.parse(fs.readFileSync('./xp.json', 'utF8'))
-
-client.on('message', message => {
-    let addxp = Math.floor(Math.random() * 10) +1
-    if(!xp[message.author.id]) {
-        xp[message.author.id] = {
-            level: 0,
-            xp: 0
-        }
-    }
-    var currentLevel = xp[message.author.id].level
-    var currentXp = xp[message.author.id].xp
-    var nextLevel = xp[message.author.id].level * 100;
-    xp[message.author.id].level = currentXp + addxp;
-    if(nextLevel <= xp[message.author.id].xp) {
-        xp[message.author.id].xp = currentLevel + 1;
-        var levelUpEmbed = new Discord.RichEmbed()
-        .setAuthor(message.author.username, message.author.avatarURL)
-        .setDescription('Поздравляю\n Вы получили ${currentLevel + 1} уровень!')
-        .setColor('RANDOM')
-        .setFooter('Harika | XP System')
-        message.channel.send(levelUpEmbed)
-    }
-    fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
-        if(err) {
-            console.log(err)
-        }
-    })
-})
 client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
 client.on('ready', () => {
