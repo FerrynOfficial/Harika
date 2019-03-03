@@ -29,3 +29,4 @@ exports.help = {
     enabled: true,
     owner: false,
     name: 'ban'
+}
