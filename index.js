@@ -4,14 +4,14 @@ const fs = require('fs')
 client.login('process.env.BOT_TOKEN')
 client.owner = 'Ваш Айди';
 client.on('ready', () => {
-    client.user.setActivity('Ваш Статус', 'Ваш статус')
 })
+    client.user.setActivity('$help | Русский Бот', '$help | Русский Бот')
 client.on('guildMemberAdd', member => {
-    var channel = member.guild.channels.get('Айди канала')
+    var channel = member.guild.channels.get('551126937825968139')
    message.channel.send(`**${member}, Добро пожаловать на сервер ${member.guild.name}**`)
 })
     client.on('guildMemberRemove', member => {
-        var channel = member.guild.channel1s.get('Айди канала')
+        var channel = member.guild.channel1s.get('551126937825968139')
         message.channel.send(`**Прощай, ${member.user.tag}, желаем тебе удачи!**`)
 })
 client.on('messageDelete', message => {
@@ -20,10 +20,10 @@ client.on('messageDelete', message => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .setDescription(`**Удалено сообщения**\n**Содержание:** ${message.content}\n**ID:** ${message.id}`)
     .setColor('#FF0000')
-    .setFooter('Ваше Сообщение', client.user.avatarURL)
+    .setFooter('Harika | Logs', client.user.avatarURL)
    message.channel.send(embed)
 })
-client.prefix = 'Ваш Префикс'
+client.prefix = '$'
 client.commands = new Discord.Collection();
 fs.readdir('./cmds/', (err, files) => {
     if(err) console.log(err)
