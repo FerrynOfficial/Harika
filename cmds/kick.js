@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
         return
     }
     message.guild.members.get(kickmember.id).kick(reason)
-    message.reply(`**Вы успешно кикнули ${kickmember.user.tag}!**`)
+    message.reply(`**Вы успешно кикнули** `${kickmember.user.tag}`!`)
 
 }
 exports.help = {
