@@ -7,6 +7,7 @@ exports.run = (client, message, args) => {
     .addField('Создатель', client.users.get(client.owner), true)
     .addField('Создан', moment(client.user.createdAt).format('HH:MM DD-MM-YY'), true)
     .addField(`Ping`, `${Math.floor(client.ping)}`, true)
+    .addField('Префикс', `${client.prefix}`, true)
     .setThumbnail(client.user.avatarURL)
     .addField('Discord.js', `v${Discord.version}`, true)
     .setFooter('Harika | BotInfo', client.user.avatarURL)
@@ -14,5 +15,5 @@ exports.run = (client, message, args) => {
     message.channel.send(embed)
    }
    exports.help = {
-    name: 'botinfo'
+    name: 'about'
    }
