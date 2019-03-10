@@ -1,5 +1,5 @@
-eexports.run = (client, message, args) => {
-    const Discord = requireq('discord.js')
+exports.run = (client, message, args) => {
+    const Discord = require('discord.js')
     if(!message.member.permissions.has('ADMINISTRATOR')) return message.reply('У вас недостаточно прав!')
     var embed = new Discord.RichEmbed()
     .setTitle('Обновление 3.0')
