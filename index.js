@@ -8,7 +8,7 @@ client.on('ready', () => {
     client.user.setStatus('dnd')
     client.user.setPresence({
         game:{
-          name:'$help | Русский Бот',
+          name:`$help |${client.users.size} пользователей`,
           type:"PLAYING"
         }
       }) 
