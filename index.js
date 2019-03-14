@@ -52,4 +52,12 @@ client.on('message', message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
     const args = message.content.slice(client.prefix.length).trim().split(/ +/g);
+et command = args.shift().toLowerCase();
+    let cmd;
+    if(client.commands.has(command)) {
+        cmd = client.commands.get(command)
+    }
+    if(!cmd) return;
+    cmd.run(client, message, args)
 })
+
