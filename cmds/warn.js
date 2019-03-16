@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
         message.reply('**У вас нет прав на это.**')
         return
     }
-    var kickmember = message.guild.member(message.mentions.users.first())
+    var warnmember = message.guild.member(message.mentions.users.first())
     if(!warnmember) {
         message.reply('**Пользователь не найден**')
         return
