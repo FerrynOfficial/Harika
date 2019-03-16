@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
     var embed = new Discord.RichEmbed()
     .setAuthor(message.author.username, message.author.avatarURL)
     .setTitle('Предупреждение')
-    .setDescription(`${warnmember} был предупрежден!\n Причина: ${reason}`)
+    .setDescription(`**${warnmember} был предупрежден!\n Причина: ${reason}**`)
     message.channel.send(embed)
 }
 exports.help = {
