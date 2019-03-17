@@ -9,5 +9,8 @@ exports.run = (client, message, args) => {
     message.channel.send(embed)
 }
 exports.help = {
+group: 'general',
+    usage:'$news',
+    desc:'Показывает Новости сервера FlameCommunity',
     name:'news'
 }
