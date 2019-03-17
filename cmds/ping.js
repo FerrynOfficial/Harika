@@ -8,5 +8,8 @@ exports.run = (client, message, args) => {
     .setFooter('Harika | Ping', client.user.avatarURL)
     message.channel.send(embed)
    }
-   exports.help = {
-    name: 'ping' }
+   exports.help = {group: 'general',
+    desc: 'Покакзывает пинг',
+    usage: '$ping',
+    name: 'ping'
+ }
