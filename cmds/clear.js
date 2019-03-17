@@ -24,5 +24,8 @@ exports.run = (client, message, args) => {
     })
 }
 exports.help = {
-    name: 'clear'
+group: 'moderation',
+desc: 'Очищает сообщения',
+usage: '$clear [кол-во сообщений]',
+name: 'clear'
 }
