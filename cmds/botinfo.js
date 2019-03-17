@@ -15,5 +15,8 @@ exports.run = (client, message, args) => {
     message.channel.send(embed)
    }
    exports.help = {
-    name: 'about'
+group: 'general',
+desc: 'Показывает информацию о боте',
+usage: '$sabout',
+name: 'about'
    }
