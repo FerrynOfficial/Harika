@@ -29,8 +29,8 @@ exports.run = (client, message, args) => {
 }
 exports.help = {
     group: 'general',
-    guildOnly: true,
-    enabled: true,
-    owner: false,
+    group: 'moderation',
+    desc: 'Выдает Предупреждение',
+    usage: '$warn [Пользователь] [Причина]',
     name: 'warn'
 }
