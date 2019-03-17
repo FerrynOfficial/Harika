@@ -1,4 +1,4 @@
-onst Discord = require('discord.js')
+const Discord = require('discord.js')
 exports.run = (client, message, args) => {
     var args1 = message.content.split(' ')
     if(!client.commands.has(args1[1])) {
