@@ -25,8 +25,8 @@ exports.run = (client, message, args) => {
     message.reply(`**Вы успешно забанили ${kickmember.user.tag}!**`)
 }
 exports.help = {
-    guildOnly: true,
-    enabled: true,
-    owner: false,
-    name: 'ban'
+group: 'moderation',
+desc: 'Выдает Бан',
+usage: 'ban [Пользователь] [Причина]', 
+name: 'ban'
 }
