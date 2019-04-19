@@ -3,9 +3,6 @@ exports.run = (client, message, args) => {
     var args1 = message.content.split(' ')
     if(!client.commands.has(args1[1])) {
         var embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setDescription('Меню помощи было выслано вам в ЛС.')
-        message.channel.send(embed)
         .setTitle('Помощь | Help')
         .addField('Основное', client.commands.filter(cmd => cmd.help.group === 'general').map(cmd => `$${cmd.help.name} - ${cmd.help.desc}`).join('\n'))
         .addField('Модерация', client.commands.filter(cmd => cmd.help.group === 'moderation').map(cmd => `$${cmd.help.name} - ${cmd.help.desc}`).join('\n'))
