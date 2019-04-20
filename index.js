@@ -1,7 +1,6 @@
 global.Discord = require('discord.js')
 const client = new Discord.Client();
 const fs = require('fs')
-const warn = JSON.parse(fs.readFileSync('./warnings.json', 'utf8'))
 client.login(process.env.BOT_TOKEN)
 client.owner = '525003205394825257';
 client.on('ready', () => {
