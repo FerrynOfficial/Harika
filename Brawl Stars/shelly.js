@@ -11,7 +11,7 @@ if (!brawler) {
   return
 }
 exports.help = {
- group: 'brawl stars',
+ group: 'BrawlStars',
  desc: 'Показывает информацию о указанном Бравлере',
  usage: 'brawl-info (Brawler)',
  name: 'brawl-info shelly'
