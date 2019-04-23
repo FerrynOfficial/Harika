@@ -6,7 +6,6 @@ exports.run = (client, message, args) => {
         .setColor('RANDOM')
         .addField('Основное', client.commands.filter(cmd => cmd.help.group === 'general').map(cmd => `$${cmd.help.name} - ${cmd.help.desc}`).join('\n'))
         .addField('Модерация', client.commands.filter(cmd => cmd.help.group === 'moderation').map(cmd => `$${cmd.help.name} - ${cmd.help.desc}`).join('\n'))
-        .addField('BrawlStars', client.commands.filter(cmd => cmd.help.group === 'BrawlStars').map(cmd => `$${cmd.help.name} - ${cmd.help.desc}`).join('\n'))
         message.member.send(embed)
         var embed1 = new Discord.RichEmbed()
        .setColor('RANDOM')
