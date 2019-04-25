@@ -46,9 +46,9 @@ exports.run = (client, message, args) => {
         return
         
        profile[warnmember.id].warns++
-       fs.writeFile('./profile.json')JSON.stringify(profile), (err)=>{
+       fs.writeFile('./profile.json',JSON.stringify(profile), (err)=>{
          if(err) console.log(err)
-       }
+       })
     }
     var embed = new Discord.RichEmbed()
     .setTitle('Предупреждение')
