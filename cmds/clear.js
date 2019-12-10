@@ -10,7 +10,6 @@ exports.run = (client, message, args) => {
         .setAuthor(message.author.username, message.author.avatarURL)
         .setDescription('Укажите пожалуйста число!')
         .setColor(client.color)
-        .setFooter('Harika | Clear', client.user.avatarURL)
         return
         message.channel.send(embed)
     }
@@ -19,13 +18,9 @@ exports.run = (client, message, args) => {
         .setAuthor(message.author.username, message.author.avatarURL)
         .setDescription(`Было удалено **${purge}** сообщений!`)
         .setColor(client.color)
-        .setFooter('Harika | Clear', client.user.avatarURL)
         message.channel.send(embed1).then(m => m.delete(10000))
     })
 }
 exports.help = {
-group: 'moderation',
-desc: 'Очищает сообщения',
-usage: '$clear [кол-во сообщений]',
-name: 'clear'
+name: 'purge'
 }
