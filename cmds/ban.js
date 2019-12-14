@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     }
     var kickmember = message.guild.member(message.mentions.users.first())
     if(!kickmember) {
-        message.reply('**Пользователь не найден**\n`$ban @User Причина`')
+        message.reply('**Пользователь не найден**\n`f!ban @User Причина`')
         return
     }
     if(kickmember.permissions.has('BAN_MEMBERS')) {
@@ -25,8 +25,5 @@ exports.run = (client, message, args) => {
     message.reply(`**Вы успешно забанили ${kickmember.user.tag}!**`)
 }
 exports.help = {
-group: 'moderation',
-desc: 'Выдает Бан',
-usage: 'ban [Пользователь] [Причина]', 
 name: 'ban'
 }
